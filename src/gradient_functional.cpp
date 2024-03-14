@@ -5,6 +5,10 @@
 #include <cmath>
 using namespace std;
 
+// Investigate how the gradient of the functional is computed. This gradient guides the optimization process towards minimizing the discrepancy between observed and predicted intensities.
+// Look for how the partial derivatives of the surface height function (p and q) are used to compute the gradient.
+// Examine how the terms involving G1, G2, and G3 are calculated. These terms represent contributions to the gradient from different components of the functional, including those related to lighting conditions.
+
 //Definition of the gradient of the functional to be minimized
 Vector<double> gradientFunctional(const Vector<double> &x, const Matrix &image)
 {

@@ -4,6 +4,11 @@
 #include <cmath>
 
 // Definition of the functional to be minimized
+
+// Look for how the Lambertian shading model is implemented. This model relates the observed image intensities to the surface normals and the lighting conditions.
+// Examine how the discrepancy between observed intensities and those predicted by the shading model is computed. This discrepancy implicitly captures information about the lighting conditions.
+// Check for terms involving image(i, j), p(i, j), and q(i, j), where image(i, j) represents the observed intensity at pixel (i, j), and p(i, j) and q(i, j) are related to the surface normals.
+
 double functional(const Vector<double> &x, const Matrix &image)
 {
    Matrix p = x(0, image.n * image.m - 1).toMatrix(image.n, image.m);
