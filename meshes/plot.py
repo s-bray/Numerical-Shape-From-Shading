@@ -45,7 +45,7 @@ def plot_mesh(vertices, quadrilaterals):
         x = [vertices[quad[0]-1, 0], vertices[quad[1]-1, 0], vertices[quad[2]-1, 0], vertices[quad[3]-1, 0], vertices[quad[0]-1, 0]]
         y = [vertices[quad[0]-1, 1], vertices[quad[1]-1, 1], vertices[quad[2]-1, 1], vertices[quad[3]-1, 1], vertices[quad[0]-1, 1]]
         z = [vertices[quad[0]-1, 2], vertices[quad[1]-1, 2], vertices[quad[2]-1, 2], vertices[quad[3]-1, 2], vertices[quad[0]-1, 2]]
-        ax.plot(x, y, z, c='b', linestyle='-', linewidth=0.2)
+        ax.plot(x, y, z, c='b', linestyle='-', linewidth=0.3)
     
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
