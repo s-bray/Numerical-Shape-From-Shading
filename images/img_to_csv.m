@@ -1,7 +1,7 @@
-colorImg = imread('dog1-comp_baran.jpg');
-grayImg = rgb2gray( colorImg );
+colorImg = imread('character.png');
+grayImg = colorImg;
 
-fichier = fopen('dog3.csv','w');
+fichier = fopen('character.csv','w');
 
 fprintf(fichier,'%i\t %i\n',size(grayImg,1), size(grayImg,2));
 
