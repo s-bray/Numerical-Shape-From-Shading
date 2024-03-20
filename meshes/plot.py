@@ -31,6 +31,7 @@ def load_mesh(filename):
 
     return np.array(vertices), np.array(quadrilaterals)
 
+# Plot the mesh - Scatter Logic
 # def plot_mesh(vertices, quadrilaterals):
 #     fig = plt.figure()
 #     ax = fig.add_subplot(111, projection='3d')
@@ -43,24 +44,24 @@ def load_mesh(filename):
 #     ax.set_zlabel('Z')
 #     plt.show()
 
+# Plot the mesh - Wire Logic
 def plot_mesh(vertices, quadrilaterals):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-
+    
     # Plot vertices
-    # ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2], c='r', marker='o')
-
-    # Plot quadrilaterals wireframe
+    # ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2], c='r', marker='.')
+    
+    Plot quadrilaterals wireframe
     for quad in quadrilaterals:
-
         x = [vertices[quad[0]-1, 0], vertices[quad[1]-1, 0], vertices[quad[2]-1, 0], vertices[quad[3]-1, 0], vertices[quad[0]-1, 0]]
         y = [vertices[quad[0]-1, 1], vertices[quad[1]-1, 1], vertices[quad[2]-1, 1], vertices[quad[3]-1, 1], vertices[quad[0]-1, 1]]
         z = [vertices[quad[0]-1, 2], vertices[quad[1]-1, 2], vertices[quad[2]-1, 2], vertices[quad[3]-1, 2], vertices[quad[0]-1, 2]]
-
         ax.plot(x, y, z, c='b', linestyle='-', linewidth=0.2)
-        ax.set_xlabel('X')
-        ax.set_ylabel('Y')
-        ax.set_zlabel('Z')
+    
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
     plt.show()
 
 def main():
