@@ -8,7 +8,7 @@ int main()
 {
 
 
-    Matrix Image = csvtoMatrix("images/character.csv");
+    Matrix Image = csvtoMatrix("images/face.csv");
     const clock_t startTime = clock(); //start timer
 
     // First optimization to recover the directional derivatives of the height
@@ -28,7 +28,7 @@ int main()
     Matrix render = y.toMatrix(Image.n, Image.m);
 
     // Save the mesh
-    matrixToMesh("meshes/character.mesh", render);
+    matrixToMesh("meshes/face.mesh", render);
 
     //display timer
     cout << "Execution time in seconds: " << float(clock() - startTime) / CLOCKS_PER_SEC << "\n";
