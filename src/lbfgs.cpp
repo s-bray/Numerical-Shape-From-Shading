@@ -24,7 +24,7 @@ Vector<double> LBFGS(Vector<double> &x, double (*function)(const Vector<double> 
         Vector<double> gradient = gradientFunction(x, M);
         Vector<double> q = gradient;
         cout << "Gradient norm " << gradient.norm() << "\n";
-        if (gradient.norm() < eps || k == 2000)
+        if (gradient.norm() < eps || k == 5000) //max iterations set to 5000
         {
             return x;
         }

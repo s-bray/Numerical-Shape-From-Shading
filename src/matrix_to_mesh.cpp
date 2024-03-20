@@ -48,7 +48,7 @@ void matrixToMesh(const string& fichier, const Matrix& M) {
     for (int j = 0; j < M.m; j++) {
         for (int i = 0; i < M.n; i++) {
             mesh << i << " " << j << " " << M.val[i][j] << " " << 0 << endl;
-            vertices.push_back({static_cast<float>(i), static_cast<float>(j), M.val[i][j]});
+            vertices.push_back({static_cast<float>(i), static_cast<float>(j), static_cast<float>(M.val[i][j])});
         }
     }
     mesh << endl;
