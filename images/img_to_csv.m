@@ -1,7 +1,8 @@
-colorImg = imread('character.png');
+colorImg = imread('pepper256.pgm');
+% grayImg = rgb2gray( colorImg );
 grayImg = colorImg;
 
-fichier = fopen('character.csv','w');
+fichier = fopen('pepper.csv','w');
 
 fprintf(fichier,'%i\t %i\n',size(grayImg,1), size(grayImg,2));
 
